@@ -332,7 +332,6 @@
 (defn total-priority-score [input]
   (apply + (determine-priorities input)))
 
-
 (defn determine-elf-groups
   ([input]
    (determine-elf-groups input '()))
