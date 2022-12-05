@@ -2526,7 +2526,6 @@
         (= :Paper opponent-choice) :Rock
         (= :Scissors opponent-choice) :Paper))
 
-
 (defn win? [opponent-choice responding-choice]
   (= responding-choice (winning-choice opponent-choice)))
 
@@ -2558,5 +2557,4 @@
           (= :Lose outcome) base-score)))
 
 (defn score-predetermined-match [input]
-  (apply + (map score-predetermined-round (list->couplet input)))
-  )
+  (apply + (map score-predetermined-round (list->couplet input))))
