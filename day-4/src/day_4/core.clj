@@ -1027,7 +1027,7 @@
   (#{1 2 3} #{2}) -> true
   (#{1 2 3} #{2 3 4}) -> false"
   [[elf1-sections elf2-sections]]
-  (let [shared-sections (overlapping-sections elf1-sections elf2-sections)]
+  (let [shared-sections (overlapping-sections [elf1-sections elf2-sections])]
     (or (= shared-sections elf1-sections)
         (= shared-sections elf2-sections))))
 
